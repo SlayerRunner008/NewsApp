@@ -1,6 +1,8 @@
 package com.example.newsapp
 
+import Items.NewsBoxList
 import Items.NewsList
+import Items.newsBoxList
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.newsapp.ui.theme.NewsAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -40,14 +43,14 @@ class MainActivity : ComponentActivity() {
 fun HomePage(x: PaddingValues){
 
     Column {
-        Row() { }
-        Row { }
         Text(
-            text = "Ultimas noticias"
+            text = "Ultimas noticias",
+            fontSize = 35.sp
         )
-        LazyRow { }
+        NewsBoxList()
         Text(
-            text = "Alrededor del mundo"
+            text = "Alrededor del mundo",
+            fontSize = 25.sp
         )
         NewsList()
     }
