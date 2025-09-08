@@ -9,5 +9,8 @@ val newsList = listOf(
     NewsItem("Perro loco ataca abuela",""),
     NewsItem("Perro loco ataca abuela",""),
     NewsItem("Perro loco ataca abuela",""),
+    NewsItem("Perro loco ataca abuela",""),
+    NewsItem("Perro loco ataca abuela",""),
     NewsItem("Perro loco ataca abuela","")
+
 )

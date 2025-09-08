@@ -1,5 +1,6 @@
 package com.example.newsapp
 
+import Items.NavBar
 import Items.NavegationText
 import Items.NewsBoxList
 import Items.NewsList
@@ -22,6 +23,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -45,23 +47,34 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomePage(x: PaddingValues){
 
-    Column {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(vertical = 35.dp)
+    ) {
+        NavBar()
         NavegationText()
         Text(
             text = "Ultimas noticias",
-            fontSize = 35.sp
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(10.dp)
         )
         NewsBoxList()
         Text(
             text = "Alrededor del mundo",
-            fontSize = 25.sp
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(10.dp)
         )
         NewsList()
     }
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     NewsAppTheme {
